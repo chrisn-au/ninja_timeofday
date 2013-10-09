@@ -7,9 +7,11 @@ Installation
 Step 1 - Fetch the driver
 
 cd /opt/ninja/drivers
+
 git clone https://github.com/chrisn-au/ninja_timeofday.git
 
 cd ninja_timeofday
+
 npm install -g
 
 Step 2 - Update the Latitude and Longitude
