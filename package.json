@@ -4,7 +4,7 @@
   "description": "Time of day device for Ninjablock ",
   "main": "index.js",
   "dependencies" : {
-     "suncal" : "1.0.0"
+     "suncalc" : "1.0.0"
   },
   "repository": "",
   "author": "",
