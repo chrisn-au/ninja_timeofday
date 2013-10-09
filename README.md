@@ -27,8 +27,11 @@ Step 4 - Update the dashboard driver with the following states
 Find the new device on the dashboard. From the cog on the top left corner choose add new state and add
 
 DAWN
+
 DAY
+
 DUSK
+
 NIGHT
 
 
