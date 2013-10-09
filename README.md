@@ -22,6 +22,16 @@ Step 3 - Restart the Ninja Block process
 
 sudo service ninjablock restart
 
+Step 4 - Update the dashboard driver with the following states
+
+Find the new device on the dashboard. From the cog on the top left corner choose add new state and add
+
+DAWN
+DAY
+DUSK
+NIGHT
+
+
 License
 
 Copyright (C) 2013 Ninja Blocks Inc
