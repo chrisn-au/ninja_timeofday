@@ -12,7 +12,7 @@ git clone https://github.com/chrisn-au/ninja_timeofday.git
 
 cd ninja_timeofday
 
-sudo npm install -g
+npm install
 
 Step 2 - Update the Latitude and Longitude
 
