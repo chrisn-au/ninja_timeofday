@@ -6,16 +6,17 @@ Installation
 
 Step 1 - Fetch the driver
 
-cd PATH_TO_NINJA_CLIENT/drivers
-git clone https://github.com/chrisn_au/ninja_timeofday.git
+cd /opt/ninja/drivers
+git clone https://github.com/chrisn-au/ninja_timeofday.git
+
+cd ninja_timeofday
+npm install -g
 
 Step 2 - Update the Latitude and Longitude
 
-cd timeofday
-
 edit the index.js file to update lat and lng 
 
-Step 2 - Restart the Ninja Block process
+Step 3 - Restart the Ninja Block process
 
 sudo service ninjablock restart
 
