@@ -5,8 +5,8 @@ var Device = require('./lib/device')
 // Give our module a stream interface
 util.inherits(myModule,stream);
 
-var home_lat = -33.716905
-var home_lng = 151.123287
+var home_lat = 123.4567
+var home_lng = 123.8976
 /**
  * Called when our client starts up
  * @constructor
