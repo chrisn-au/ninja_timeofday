@@ -5,8 +5,7 @@
   "main": "index.js",
   "dependencies" : {
      "suncalc" : "1.0.0",
-     "date-utils" : "*",
-     "querystring" : "*"
+     "date-utils" : "*"
   },
   "repository": "",
   "author": "",
