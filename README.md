@@ -6,6 +6,8 @@ Installation
 
 Step 1 - Fetch the driver
 
+```
+
 cd /opt/ninja/drivers
 
 git clone https://github.com/chrisn-au/ninja_timeofday.git
@@ -14,14 +16,16 @@ cd ninja_timeofday
 
 npm install
 
+```
+
 Step 2 - Update the Latitude and Longitude
 
 edit the index.js file to update lat and lng 
 
 Step 3 - Restart the Ninja Block process
-
+```
 sudo service ninjablock restart
-
+```
 Step 4 - Update the dashboard driver with the following states
 
 Find the new device on the dashboard. From the cog on the top left corner choose add new state and add
