@@ -21,14 +21,14 @@
                                      "display" : "Sunset"
                                 },   
                                 {
-                                     "name" : "night",
+                                     "name" : "dusk",
                                      "display" : "Night" 
                                 },     
                                 {
                                      "name": "myDusk",
-                                     "display": "MyDusk",
+                                     "display": "Dusk",
                                      "tod": "PM",
-                                     "angle": 1.2
+                                     "angle": 5
                                 }]     
                                 
                         },
