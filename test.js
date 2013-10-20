@@ -14,6 +14,8 @@ var OFFSET = "offset"
 var ANGLE = "angle"
 datastatus = false;
 
+var currentState = ''
+
 
  
  locations = data.config.Locations;
@@ -78,8 +80,8 @@ datastatus = false;
            var target = new Date(myTimes[i].time);
            console.log("State " + myTimes[i].display + " Time " + target.getHours() + ":" + target.getMinutes()); 
            console.log
-           if (myTimes[i].alertTime > 0) { break; }
-            currentState = myTimes[i].display
+           if (myTimes[i].alertTime > 0) { ; }
+            else { currentState = myTimes[i].display }
        }; 
        console.log("Current state " + currentState);
        console.log(" ");   
