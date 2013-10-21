@@ -36,7 +36,9 @@ var currentState = ''
             var timeObj = { name : time.name,
                             display : time.display,
                             ms : time.offset*1000};
+                            
             myTimes.push(timeObj)
+            
         }
         else if(ANGLE in time){
            
@@ -57,29 +59,42 @@ var currentState = ''
         }     
         
       });
-     
-  
+      processTimes(myTimes, loc);     
+}     
+
+
+function processTimes(myTimes, loc)     
+{  
        var times = SunCalc.getTimes(new Date(), loc.latitude, loc.longitude);
        var now = new Date();
        
        myTimes.forEach(function (lc) {
-         lc.time =  times[lc.name];
-         lc.time = lc.time - lc.ms;
-         lc.alertTime = (times[lc.name].getTime() - now.getTime() - lc.ms) ;
+       
+         lc.time =  times[lc.name].getTime() + lc.ms;     // where the magic happens retrieve the time
+                                        // object from Suncalc
+      
+         lc.alertTime = (lc.time - now.getTime()) ;
          lc.timeout = setTimeout(updateNinja, lc.altertTime , lc.display)
-       });    
+       });
+       
+       // sort list
+           
        myTimes.sort(function(a, b){
           return a.alertTime - b.alertTime
        })
+       
+       
        console.log(" ");  
        console.log("Location " + loc.name);
        console.log("Latitude " + loc.latitude);
        console.log("Longitude " + loc.longitude);
+       
+       currentState = myTimes[myTimes.length - 1].display
+       
        for (var i = 0; i < myTimes.length; i++ ){
         
            var target = new Date(myTimes[i].time);
            console.log("State " + myTimes[i].display + " Time " + target.getHours() + ":" + target.getMinutes()); 
-           console.log
            if (myTimes[i].alertTime > 0) { ; }
             else { currentState = myTimes[i].display }
        }; 
