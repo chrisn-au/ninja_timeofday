@@ -9,7 +9,7 @@
                                 {
                                       "name" : "sunriseEnd",
                                       "display" : "Day", 
-                                      "offset" : 120
+                                      "offset" : -1500
                                      
                                 },
                                 {
