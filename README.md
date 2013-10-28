@@ -1,10 +1,22 @@
-ninja_timeofday
+NINJA TIMEOFDAY
 
 A Time of Day state device
 
 Installation
 
-Step 1 - Fetch the driver
+Step 1 - Login to your block
+
+Windows use putty / mac linux use terminal
+
+```
+ssh ubuntu@ninjablock.local
+
+```
+ the password should be temppwd
+ 
+ 
+Step 2 - Fetch the driver 
+ 
 
 ```
 
@@ -18,9 +30,13 @@ npm install
 
 ```
 
-Step 2 - Update the Latitude and Longitude
+Step 3 - Update the times that you would like to be notified - edit the config file
 
-edit the index.js file to update lat and lng 
+```
+vi config.json
+```
+
+ 
 
 Step 3 - Restart the Ninja Block process
 ```
@@ -37,6 +53,8 @@ DAY
 DUSK
 
 NIGHT
+
+and any others you have added
 
 
 License
