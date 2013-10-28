@@ -3,7 +3,7 @@ var Device = require('./lib/device')
   , stream = require('stream');
 
 
-var data = require('../../config/ninja_timeofday/config.json');
+var data = require('./config.json');
 // Give our module a stream interface
 util.inherits(myModule,stream);
 
