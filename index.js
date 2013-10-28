@@ -2,11 +2,11 @@ var Device = require('./lib/device')
   , util = require('util')
   , stream = require('stream');
 
+
+var data = require('../../config/ninja_timeofday/config.json');
 // Give our module a stream interface
 util.inherits(myModule,stream);
 
-var home_lat = 123.4567
-var home_lng = 123.8976
 /**
  * Called when our client starts up
  * @constructor
@@ -28,18 +28,14 @@ function myModule(opts,app) {
 
   app.on('client::up',function(){
 
-    // The client is now connected to the cloud
-
-    // Do stuff with opts, and then commit it to disk
-    if (!opts.hasMutated) {
-      opts.hasMutated = true;
-    }
-
-    self.save();
-
-    // Register a device
-    //self.emit('register', new Device());
-    if (self.first) { self.emit('register', new Device(home_lat,home_lng)); self.first = false;}
+    // The client is now connecte to the cloud
+    
+    locations = data.config.Locations;
+ 
+    locations.forEach(function (location) {
+         self.emit('register', new Device(location)); 
+    });
+ 
   });
 };
 
