@@ -8,25 +8,25 @@
                                 "Times":[
                                 {
                                       "name" : "sunriseEnd",
-                                      "display" : "Day", 
+                                      "display" : "DAY", 
                                       "offset" : -150
                                      
                                 },
                                 {
                                      "name" : "dawn",
-                                     "display": "Dawn" 
+                                     "display": "DAWN" 
                                 },    
                                 {
                                      "name" : "sunset",
-                                     "display" : "Sunset"
+                                     "display" : "SUNSET"
                                 },   
                                 {
                                      "name" : "dusk",
-                                     "display" : "Night" 
+                                     "display" : "NIGHT" 
                                 },     
                                 {
                                      "name": "myDusk",
-                                     "display": "Dusk",
+                                     "display": "DUSK",
                                      "tod": "PM",
                                      "angle": 5
                                 }]     
@@ -39,16 +39,16 @@
                                 "Times":[
                                 {
                                       "name": "dawn",
-                                      "display" : "myDawn", 
+                                      "display" : "MYDAWN", 
                                       "offset": 120
                                 },
                                 {
                                      "name" : "sunset",
-                                     "display" : "sunset"
+                                     "display" : "SUNSET"
                                 },   
                                 {
                                      "name": "myTime",
-                                     "display": "myDefined",
+                                     "display": "JUSTAFTERSUNRISE",
                                      "tod": "AM",
                                      "angle": 4.777
                                 }]      
