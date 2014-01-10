@@ -33,7 +33,7 @@ function myModule(opts,app) {
     locations = data.config.Locations;
  
     locations.forEach(function (location) {
-         self.emit('register', new Device(location)); 
+         self.emit('register', new Device(location, app)); 
     });
  
   });
