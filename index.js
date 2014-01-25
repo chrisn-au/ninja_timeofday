@@ -3,7 +3,6 @@ var Device = require('./lib/device')
   , stream = require('stream');
 
 
-var data = require('./config.json');
 // Give our module a stream interface
 util.inherits(myModule,stream);
 
@@ -25,14 +24,14 @@ function myModule(opts,app) {
 
   var self = this;
   this.first = true;
+  this.opts = opts;
+  opts.Locations = opts.Locations || [];
+  self.save();
 
   app.on('client::up',function(){
 
-    // The client is now connecte to the cloud
-    
-    locations = data.config.Locations;
- 
-    locations.forEach(function (location) {
+    // The client is now connected to the cloud
+    opts.Locations.forEach(function (location) {
          self.emit('register', new Device(location, app)); 
     });
  

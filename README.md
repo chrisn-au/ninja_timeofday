@@ -1,25 +1,24 @@
-NINJA TIMEOFDAY
+# NINJA TIMEOFDAY
 
 A Time of Day state device
 
-Installation
+## Installation
 
-Step 1 - Login to your block
+### Step 1 - Login to your block
 
 Windows use putty / mac linux use terminal
 
 ```
 ssh ubuntu@ninjablock.local
-
-```
- the password should be temppwd
- 
- 
-Step 2 - Fetch the driver 
- 
-
 ```
 
+the password should be temppwd
+ 
+ 
+### Step 2 - Fetch the driver 
+ 
+
+```
 cd /opt/ninja/drivers
 
 git clone https://github.com/chrisn-au/ninja_timeofday.git
@@ -30,34 +29,36 @@ npm install
 
 ```
 
-Step 3 - Update the times that you would like to be notified - edit the config file
+### Step 3 - Update the times that you would like to be notified
+
+Edit the config file in `/opt/ninja/config/ninja_timeofday` using [config.json](config.json) as an example
 
 ```
-vi config.json
+mkdir -p /opt/ninja/config/ninja_timeofday
+vi /opt/ninja/config/ninja_timeofday/config.json
 ```
 
  
 
-Step 3 - Restart the Ninja Block process
+### Step 4 - Restart the Ninja Block process
+
 ```
 sudo service ninjablock restart
 ```
-Step 4 - Update the dashboard driver with the following states
+
+### Step 5 - Update the dashboard driver with the following states
 
 Find the new device on the dashboard. From the cog on the top left corner choose add new state and add
 
-DAWN
-
-DAY
-
-DUSK
-
-NIGHT
+	DAWN
+	DAY
+	DUSK
+	NIGHT
 
 and any others you have added
 
 
-License
+## License
 
 Copyright (C) 2013 Ninja Blocks Inc
 
