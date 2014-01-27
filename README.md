@@ -58,6 +58,11 @@ Find the new device on the dashboard. From the cog on the top left corner choose
 and any others you have added
 
 
+### todo list
+
+add config ability from the dashboard
+
+
 ## License
 
 Copyright (C) 2013 Ninja Blocks Inc
