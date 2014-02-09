@@ -29,11 +29,24 @@ function myModule(opts,app) {
   opts.Locations = opts.Locations || new Array(defaultConfig());
   self.save();
 
+  this.devices = {};
+
   app.on('client::up',function(){
 
     // The client is now connected to the cloud
     opts.Locations.forEach(function (location) {
-         self.emit('register', new Device(location, app)); 
+      // prevent creating multiple objects each time the client connects to the cloud
+      var device = self.devices[location];
+      if (device == null) {
+        device = new Device(location, app);
+        self.devices[location] = device;
+        self.emit('register', device);
+
+        // wait 10secs to ensure that device is already registered before sending data
+        setTimeout(function() {
+          device.start();
+        }, 10000);
+      }
     });
  
   });
