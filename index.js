@@ -27,15 +27,19 @@ function myModule(opts,app) {
   this.opts = opts;
   
   opts.Locations = opts.Locations || new Array(defaultConfig());
-  self.save();
+//  self.save();
 
   app.on('client::up',function(){
 
+
+    if (self.first == true){
     // The client is now connected to the cloud
-    opts.Locations.forEach(function (location) {
-         self.emit('register', new Device(location, app)); 
-    });
- 
+        opts.Locations.forEach(function (location) {
+              self.log.info('Firing up!'); 
+              self.emit('register', new Device(location, app)); 
+        });
+        self.first = false;
+    }
   });
 };
 
