@@ -29,17 +29,14 @@ function myModule(opts,app) {
   opts.Locations = opts.Locations || new Array(defaultConfig());
 //  self.save();
 
-  app.on('client::up',function(){
+  app.once('client::up',function(){
 
-
-    if (self.first == true){
-    // The client is now connected to the cloud
+      // The client is now connected to the cloud
         opts.Locations.forEach(function (location) {
               self.log.info('Firing up!'); 
               self.emit('register', new Device(location, app)); 
         });
-        self.first = false;
-    }
+        self.save();     
   });
 };
 
